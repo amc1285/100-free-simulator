@@ -92,8 +92,6 @@ section.block{margin-top:40px}
 .ladder li.me{background:var(--rope-soft)}
 .ladder li.me .lt,.ladder li.me .ll{color:var(--rope);font-weight:600}
 .ladder li.me .bar i{background:var(--rope)}
-.ladder li.sr .ll{color:var(--good);font-weight:600}
-.ladder li.sr .bar i{background:var(--good)}
 
 .check{display:flex;flex-wrap:wrap;gap:16px 24px;align-items:flex-end}
 .verdict{margin-top:14px;padding:14px 16px;border-left:5px solid var(--deep);background:var(--bg);border-radius:6px;max-width:72ch}
@@ -117,7 +115,7 @@ footer li{margin:.3em 0}
 <div class="wrap">
   <header>
     <h1>100 Free Race Builder</h1>
-    <p class="lede">Ideal splits, reaction time and underwater targets for a high school 100 yard freestyle, built from real 2026 state-meet, national-record and NCAA races. Type a goal time or a flat-start 50 to see what the race should look like.</p>
+    <p class="lede">Ideal splits, reaction time and underwater targets for a high school 100 yard freestyle, built from real 2026 Nebraska state-meet, national-record and NCAA races. Type a goal time or a flat-start 50 to see what the race should look like.</p>
   </header>
 
   <div class="controls" role="group" aria-label="Race settings">
@@ -139,10 +137,6 @@ footer li{margin:.3em 0}
       <label for="t-in" id="t-lbl">Goal 100 free</label>
       <input id="t-in" type="text" inputmode="decimal" value="54.00" autocomplete="off" aria-describedby="t-err">
     </div>
-    <div class="field">
-      <label for="sr-in">Your state record (optional)</label>
-      <input id="sr-in" class="small" type="text" inputmode="decimal" placeholder="e.g. 48.85" autocomplete="off">
-    </div>
     <div class="field" style="flex-basis:100%">
       <div class="err" id="t-err" role="status"></div>
     </div>
@@ -162,7 +156,6 @@ footer li{margin:.3em 0}
       <div class="row"><span>First 50</span><span id="s-f50">—</span></div>
       <div class="row"><span>Second 50</span><span id="s-s50">—</span></div>
       <div class="row"><span>Back-half drop-off</span><span id="s-diff">—</span></div>
-      <div class="tier" id="s-tier"></div>
     </div>
   </div>
 
@@ -218,15 +211,15 @@ footer li{margin:.3em 0}
 
   <footer>
     <h3>How the model works</h3>
-    <p>Pacing: across 50 girls’ and women’s swims and 49 boys’ and men’s swims from 45.17 to 1:03.12 and 39.91 to 52.76, the second 50 averaged about 8 to 9 percent slower than the first 50, and the middle half of all swims fell between 7.5 and 10 percent. That share barely changes with level for girls. Faster boys go out a little harder, so the boys’ ideal leans slightly more front-loaded at the top end.</p>
-    <p>50-to-100 projection: paired 50 and 100 swims from the same meets put the 100 at roughly 2.15 to 2.20 times the 50 for the fastest swimmers and about 2.22 to 2.26 times for slower high school swimmers.</p>
+    <p>Pacing: the model uses all 32 girls and 32 boys from the 2026 Nebraska state 100 free, plus NCAA finalists and national high school record swims (38 girls’ and women’s swims from 45.17 to 58.38, 37 boys’ and men’s swims from 39.91 to 54.61). For girls, the second 50 averaged about 8.4 percent slower than the first, with the middle half of swims between 7.2 and 9.4 percent. Boys go out harder: their second 50 averaged about 10 percent slower, with the middle half between 8.5 and 11.6 percent. In both groups that share barely changes from a 32nd-place state swimmer to an NCAA champion.</p>
+    <p>50-to-100 projection: swimmers who swam both the 50 and 100 at the 2026 Nebraska state meet went about 2.17 to 2.25 times their 50 time in the 100 (typical: about 2.19 for girls and 2.21 for boys). The fastest elite swimmers come in a little lower.</p>
     <p>Underwaters: elite references include a 2018 analysis of Dressel’s 50 yard record (about 12.9 meters and six kicks off the start, about 11.2 meters and six or seven kicks off the turn) and a 2025 study of elite long-course 100 free turns (men breaking out near 7.1 meters, women near 5.8 meters). High school values are scaled estimates, not measurements.</p>
     <h3 style="margin-top:16px">Sources</h3>
     <ul>
       <li><a href="https://swimmeetresults.tech/NCAA-Division-I-Women-2026/260318F017.htm">2026 NCAA Division I Women, 100 free results with reaction times and 25 splits</a></li>
       <li><a href="https://swimmeetresults.tech/NCAA-Division-I-Men-2026/260325F017.htm">2026 NCAA Division I Men, 100 free results with reaction times and 25 splits</a></li>
-      <li><a href="https://khsaa.org/swimming/2026/state/260220F013.htm">2026 Kentucky state meet, girls 100 free</a> and <a href="https://khsaa.org/swimming/2026/state/260220F014.htm">boys 100 free</a></li>
-      <li><a href="https://khsaa.org/swimming/2026/261stRoundSite1GirlsResults.pdf">2026 Kentucky first-round site results, girls</a> and <a href="https://khsaa.org/swimming/2026/261stRoundSite1BoysResults.pdf">boys</a></li>
+      <li><a href="https://sidearmstats.com/nebraska/swimdive/260226F013.htm">2026 NSAA State Championships, girls 100 free</a> and <a href="https://sidearmstats.com/nebraska/swimdive/260226F014.htm">boys 100 free</a></li>
+      <li><a href="https://sidearmstats.com/nebraska/swimdive/260226F007.htm">2026 NSAA State Championships, girls 50 free</a> and <a href="https://sidearmstats.com/nebraska/swimdive/260226F008.htm">boys 50 free</a></li>
       <li><a href="https://www.swimmingworldmagazine.com/news/rylee-erisman-breaks-gretchen-walshs-national-high-school-record-in-100-freestyle/">Rylee Erisman’s 46.73 national high school record (Swimming World)</a></li>
       <li><a href="https://swimswam.com/maximus-williamson-sets-another-national-high-school-record-with-41-54-100-free/">Maximus Williamson’s 41.54 national high school record (SwimSwam)</a></li>
       <li><a href="https://swimswam.com/gretchen-walsh-takes-down-weitzeils-national-hs-record-with-46-9-100-free/">Gretchen Walsh’s 46.98 high school swim (SwimSwam)</a></li>
@@ -245,7 +238,8 @@ footer li{margin:.3em 0}
   var MODEL = {
     girls: {
       slow: 68, fast: 44.71,
-      ratio: function(t){ return clamp(1.0951 - 0.00018*t, 1.07, 1.10); },
+      ratio: function(t){ return clamp(1.0878 - 0.00008*t, 1.07, 1.10); },
+      band: [1.072, 1.094],
       share25: 0.4749, share3: 0.4990,
       f50: { a: 2.0573, b: 0.00273 },
       rt: [0.77, 0.658], suw: [5, 12.5], tuw: [3, 9.5], sk: [2, 6], tk: [2, 5],
@@ -254,11 +248,12 @@ footer li{margin:.3em 0}
         {t:45.17, l:"2026 NCAA champion, Torri Huske"},
         {t:46.73, l:"National HS record, Rylee Erisman (2025)"},
         {t:47.02, l:"8th place, 2026 NCAA final"},
+        {t:49.48, l:"Nebraska state meet record, Olivia Calegan (2017)"},
         {t:50.17, l:"NISCA All-America standard"},
-        {t:50.66, l:"2026 Kentucky state champion"},
-        {t:53.46, l:"8th place, 2026 Kentucky state final"},
-        {t:57.69, l:"2nd, Kentucky first-round site"},
-        {t:62.02, l:"14th, Kentucky first-round site"}
+        {t:50.17, l:"2026 Nebraska state champion, Millie Knudson"},
+        {t:53.72, l:"8th place, 2026 Nebraska state final"},
+        {t:55.23, l:"Slowest prelim swim to make the 2026 Nebraska finals"},
+        {t:58.38, l:"32nd, 2026 Nebraska state prelims"}
       ],
       races: [
         ["Torri Huske, 2026 NCAA final", "45.17", ".58", "10.16", "21.41", "33.16"],
@@ -267,31 +262,36 @@ footer li{margin:.3em 0}
         ["Rylee Erisman, national HS record", "46.73", "", "", "22.75", ""],
         ["Gretchen Walsh, HS (2020)", "46.98", "", "", "22.66", ""],
         ["Julia Dennis, 2026 NCAA final", "47.02", ".63", "10.42", "22.25", "34.71"],
-        ["Lauren Wedeking, Kentucky state champ", "50.66", "", "", "24.71", ""],
-        ["Kennedy Brooks, Kentucky state final", "51.48", "", "", "24.77", ""],
-        ["Madeline Peyton, Kentucky state final", "53.46", "", "", "25.44", ""],
-        ["Ryleigh Bevil, Kentucky first round", "54.34", "", "", "25.56", ""],
-        ["Chloe Parsons, Kentucky first round", "57.69", "", "", "27.75", ""],
-        ["Grace Bullock, Kentucky first round", "59.42", "", "", "28.43", ""],
-        ["Bella Waters, Kentucky first round", "1:02.02", "", "", "29.69", ""]
+        ["Millie Knudson, 2026 Nebraska state champ", "50.17", "", "", "24.09", ""],
+        ["Jenna Polking, 2026 Nebraska state final", "50.81", "", "", "24.35", ""],
+        ["Kayla Wischhof, 2026 Nebraska state final", "52.30", "", "", "25.43", ""],
+        ["Elle Leece, 2026 Nebraska state final (8th)", "53.72", "", "", "25.74", ""],
+        ["Kate Ost, 2026 Nebraska consolation final", "53.78", "", "", "25.77", ""],
+        ["Elizabeth Wagner, 2026 Nebraska prelims", "55.24", "", "", "26.23", ""],
+        ["Jessica Fan, 2026 Nebraska prelims", "55.71", "", "", "26.72", ""],
+        ["Edisyn Venditte, 2026 Nebraska consolation final", "56.91", "", "", "27.00", ""],
+        ["Silvia Hansen, 2026 Nebraska prelims", "57.01", "", "", "27.63", ""],
+        ["Brandlyn Gentile, 2026 Nebraska prelims", "58.38", "", "", "27.84", ""]
       ]
     },
     boys: {
       slow: 60, fast: 39.83,
-      ratio: function(t){ return clamp(1.1702 - 0.00175*t, 1.07, 1.11); },
+      ratio: function(t){ return clamp(1.0884 + 0.00028*t, 1.08, 1.12); },
+      band: [1.085, 1.116],
       share25: 0.4711, share3: 0.4977,
-      f50: { a: 1.8964, b: 0.00628 },
+      f50: { a: 1.9064, b: 0.00628 },
       rt: [0.76, 0.633], suw: [6, 14], tuw: [4, 11], sk: [3, 7], tk: [2, 6],
       ladder: [
         {t:39.83, l:"NCAA record, Jordan Crooks (2025)"},
         {t:39.91, l:"2026 NCAA champion, Josh Liendo"},
         {t:41.22, l:"8th place, 2026 NCAA final"},
         {t:41.54, l:"National HS record, Maximus Williamson (2025)"},
-        {t:43.67, l:"2026 Kentucky state champion"},
+        {t:43.17, l:"Nebraska state meet record, Nate Germonprez (2023)"},
         {t:44.60, l:"NISCA All-America standard"},
-        {t:47.23, l:"8th place, 2026 Kentucky state final"},
-        {t:49.37, l:"8th, Kentucky first-round site"},
-        {t:52.46, l:"15th, Kentucky first-round site"}
+        {t:45.25, l:"2026 Nebraska state champion, Elliot Vech"},
+        {t:49.31, l:"Slowest prelim swim to make the 2026 Nebraska finals"},
+        {t:49.35, l:"8th place, 2026 Nebraska state final"},
+        {t:54.61, l:"32nd, 2026 Nebraska state prelims"}
       ],
       races: [
         ["Josh Liendo, 2026 NCAA final", "39.91", ".61", "8.93", "18.84", "29.33"],
@@ -299,17 +299,19 @@ footer li{margin:.3em 0}
         ["Gui Caribe, 2026 NCAA final", "40.41", ".57", "9.08", "19.25", "29.79"],
         ["Brendan Whitfield, 2026 NCAA final", "41.22", ".69", "9.17", "19.51", "30.38"],
         ["Maximus Williamson, national HS record", "41.54", "", "", "19.67", ""],
-        ["Lincoln Hofmann, Kentucky state champ", "43.67", "", "", "20.80", ""],
-        ["Peyton Harrison, Kentucky state final", "45.73", "", "", "22.23", ""],
-        ["Kellie Tobergte, Kentucky first round", "46.49", "", "", "22.54", ""],
-        ["Matias Verduzco, Kentucky first round", "48.32", "", "", "23.28", ""],
-        ["Trent Holland, Kentucky first round", "49.37", "", "", "23.60", ""],
-        ["Boone Thompson, Kentucky first round", "51.65", "", "", "24.96", ""],
-        ["John Brown, Kentucky first round", "52.46", "", "", "25.03", ""]
+        ["Elliot Vech, 2026 Nebraska state champ", "45.25", "", "", "21.73", ""],
+        ["Carter Hiley, 2026 Nebraska state final", "45.94", "", "", "22.03", ""],
+        ["Spencer Thom, 2026 Nebraska state final", "46.70", "", "", "22.07", ""],
+        ["Aiden Olsen, 2026 Nebraska consolation final", "47.84", "", "", "22.94", ""],
+        ["Patrick Johansen, 2026 Nebraska state final (8th)", "49.35", "", "", "23.24", ""],
+        ["Sergio Hosey-Alvarez, 2026 Nebraska prelims", "49.56", "", "", "23.57", ""],
+        ["Benjamin Nicola, 2026 Nebraska consolation final", "50.09", "", "", "23.92", ""],
+        ["Thomas Henry, 2026 Nebraska prelims", "50.58", "", "", "24.15", ""],
+        ["Lorenz Taylor, 2026 Nebraska prelims", "51.62", "", "", "24.33", ""],
+        ["Harrison Maser, 2026 Nebraska prelims", "54.61", "", "", "25.72", ""]
       ]
     }
   };
-  var BAND = [1.075, 1.101]; // middle half of real swims (second 50 ÷ first 50)
 
   var state = { g: "girls", m: "100" }, lastR = null, rz = null;
   var $ = function(id){ return document.getElementById(id); };
@@ -343,14 +345,6 @@ footer li{margin:.3em 0}
       suw: lerp(M.suw[0], M.suw[1], p), tuw: lerp(M.tuw[0], M.tuw[1], p),
       sk: Math.round(lerp(M.sk[0], M.sk[1], p)), tk: Math.round(lerp(M.tk[0], M.tk[1], p))
     };
-  }
-
-  function tierText(t){
-    var L = MODEL[state.g].ladder, best = null;
-    for (var i = 0; i < L.length; i++){ if (t <= L[i].t + 0.005){ best = L[i]; break; } }
-    if (!best) return "Slower than every marker in the data set. Splits still follow the real-race pattern.";
-    if (best === L[0]) return "At or under the NCAA record.";
-    return "At or faster than: " + best.l + " (" + fmt(best.t) + ")";
   }
 
   // ---- Lane drawing ----
@@ -412,10 +406,9 @@ footer li{margin:.3em 0}
   }
 
   // ---- Ladder ----
-  function drawLadder(t, sr){
+  function drawLadder(t){
     var ol = $("ladder"); ol.innerHTML = "";
     var M = MODEL[state.g], L = M.ladder.map(function(m){ return {t:m.t, l:m.l}; });
-    if (isFinite(sr)) L.push({t:sr, l:"Your state record", cls:"sr"});
     L.push({t:t, l:"Your target", cls:"me"});
     L.sort(function(a,b){ return a.t - b.t || (a.cls === "me" ? 1 : -1); });
     L.forEach(function(m){
@@ -469,7 +462,6 @@ footer li{margin:.3em 0}
     $("s-f50").textContent = fmt(R.f50);
     $("s-s50").textContent = fmt(R.s50);
     $("s-diff").textContent = "+" + (R.s50 - R.f50).toFixed(2);
-    $("s-tier").textContent = tierText(t);
 
     lastR = R; drawLane(R);
 
@@ -493,7 +485,7 @@ footer li{margin:.3em 0}
     tpr.appendChild(row(["Back-half 50 hold", fmt(R.s50)], 1));
     tpr.appendChild(row(["Final 25 hold", fmt(R.s[3])], 1));
 
-    drawLadder(t, parseTime($("sr-in").value));
+    drawLadder(t);
     check();
   }
 
@@ -502,7 +494,7 @@ footer li{margin:.3em 0}
     box.className = "verdict";
     if (!isFinite(a) || !isFinite(b)){ box.textContent = "Enter both numbers to see the pacing check."; return; }
     if (b <= a * 1.6 || b >= a * 2.6){ box.textContent = "Those two numbers don’t look like a 50 split and a 100 final from the same swim. Check the entries."; return; }
-    var M = MODEL[state.g], s = b - a, r = s / a, ideal = b / (1 + M.ratio(b));
+    var M = MODEL[state.g], BAND = M.band, s = b - a, r = s / a, ideal = b / (1 + M.ratio(b));
     var gap = (s - a).toFixed(2), idealGap = ((b - ideal) - ideal).toFixed(2);
     var base = "Out in " + fmt(a) + ", home in " + fmt(s) + " (back half +" + gap + "). For a " + fmt(b) + ", real swims split about " + fmt(ideal) + " / " + fmt(b - ideal) + " (+" + idealGap + "). ";
     if (r > BAND[1]){
@@ -523,7 +515,6 @@ footer li{margin:.3em 0}
       document.querySelectorAll("[data-g]").forEach(function(x){ x.setAttribute("aria-pressed", String(x === b)); });
       if (state.m === "100") $("t-in").value = state.g === "girls" ? "54.00" : "48.00";
       else $("t-in").value = state.g === "girls" ? "24.80" : "21.90";
-      $("sr-in").value = "";
       render();
     });
   });
@@ -537,7 +528,7 @@ footer li{margin:.3em 0}
       render();
     });
   });
-  ["t-in","sr-in"].forEach(function(id){ $(id).addEventListener("input", render); });
+  ["t-in"].forEach(function(id){ $(id).addEventListener("input", render); });
   ["c-50","c-100"].forEach(function(id){ $(id).addEventListener("input", check); });
 
   window.addEventListener("resize", function(){ clearTimeout(rz); rz = setTimeout(function(){ if (lastR) drawLane(lastR); }, 120); });
